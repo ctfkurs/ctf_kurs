@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Popup Window</title>
+    <link rel="stylesheet" href="../css/js.css">
+</head>
+<body>
+
+<!-- Kreiramo prvo div preko celog ekrana kome cemo dodeliti providnu crnu pozadinu rgba() -->
+<div id="popup-back-screen">
+    <!-- Kreiramo unutrasnji popup prozor -->
+    <div id="popup-window">
+        <!-- Close dugme -->
+        <a href='#' class="close" id="close-popup">X</a>
+        <!-- Popup inner box, ovde ide sadrzaj popup-a -->
+        <div id="popup-inner">
+            <h1>Popup Inner Content</h1>
+        </div>
+    </div>
+</div>
+
+<div id="click-item">
+    <a href='#' id="popup">Otvori popup</a>
+</div>
+
+<!-- scripts -->
+<script type="text/javascript">
+    //dodajemo dogadjaj click na link na stranici
+    document.getElementById("popup").addEventListener("click",function () {
+        //prikazujemo popup
+        document.getElementById("popup-back-screen").style.display = "block";
+
+         //u sledecim redovima pozicioniramo popup prozor na sredinu ekrana po horizontali
+
+        //uzimamo sirinu ekrana
+        var screenWidth = screen.width;
+        //racunamo polovinu ekrana - sirina
+        var halfHorizontal = screenWidth / 2;
+        //uzimamo sirinu popup prozora (zadata u css-u)
+        var popupWidth = document.getElementById("popup-window").offsetWidth;
+        //tacnu polovinu po sirini dobijamo tako sto od polovine ekrana oduzimamo polovinu sirine popup prozora
+        var popupH = halfHorizontal - popupWidth / 2 + "px";
+
+        //primena marginLeft na popup
+        document.getElementById("popup-window").style.marginLeft = popupH;
+
+    })
+
+    //dodajemo dogadjaj za zatvaranje popup prozora
+    document.getElementById("close-popup").addEventListener("click",function () {
+        document.getElementById("popup-back-screen").style.display = "none";
+    })
+
+    //dogadjaj za klik van popup bloka, zatvara se popup ako se klikne izvan popup diva
+    document.getElementById("popup-back-screen").onclick = function(e) {
+        if(e.target != document.getElementById('popup-window')) {
+            document.getElementById("popup-back-screen").style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>

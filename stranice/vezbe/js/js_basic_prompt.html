@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Basic</title>
+    <link rel="stylesheet" href="../css/js_basic.css">
+</head>
+<body>
+<div id="content-block">
+    <div id="content-inner">
+        <p id="content-stat">Sakrij sadrzaj</p>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+    var info = prompt("Koliko imate godina?");
+
+    document.getElementById("content-stat").addEventListener("mouseover",function () {
+        document.getElementById("content-stat").innerHTML = "Prikazi sadrzaj";
+    })
+
+    document.getElementById("content-stat").addEventListener("mouseout",function () {
+        document.getElementById("content-stat").innerHTML = "Sakrij sadrzaj";
+    })
+
+</script>
+</body>
+</html>

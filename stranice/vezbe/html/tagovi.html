@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Osnovni tagovi</title>
+    <link rel="stylesheet" href="../css/tagovi.css">
+</head>
+<body>
+
+<!-- Ovo je centrirani blok, u njega stavljamo sadrzaj -->
+<div id="article-block">
+    <h1>Ovo je naslov 1 - &lt;h1&gt; tag</h1>
+    <h2>Vežba osnovnih HTML tagova - &lt;h2&gt; tag</h2>
+    <hr>
+    <h3>Primeri em i strong primene</h3>
+    <p><em>Ovo je primer iskošenog texta.</em> - &lt;em&gt; tag</p>
+    <p><strong>Ovo je primer podebljanog texta.</strong> - &lt;strong&gt; tag</p>
+    <h3>Način na koji smo napravili ovu stranicu</h3>
+    <p>U ovom primeru smo koristili sledeće <strong>HTML</strong> elemente. Najpre smo napravili jedan <strong>div</strong> i pozicionirali ga na
+        sredinu ekrana
+        i isto tako smo ga odaljili od gornje ivice tako što smo mu dali css pravilo <em>margin:100px auto;</em> Divu nismo davali <em>height</em>
+        zato što želimo
+        da nam se automaski visina povećava kako se povećava i sadržaj unutar diva. Znači ako dodamo novi text div će automatski povećati visinu kako
+        bi sve stalo.
+        <br>Isto tako da bismo odaljili sad sadržaj odo ivica <strong>diva</strong> korisitli smo <em>padding:20px</em>, što znači da smo odbili
+        sadržaj za 20px sa svih strana.
+        <br>U samom divu smo koristili <strong>HR</strong> tagove za linije ispod glavnog naslova i u dnu bloka. <strong>BR</strong> tagove smo
+        koristili za prelazak u novi red.
+        <br>Isto tako u primeru smo koristili <strong>entitete</strong> da bi prikazali &lt;H1&gt; i &copy; Copyright simbol.
+        <br>Koristili smo i tagove <em>em</em> i <strong>strong</strong>.</p>
+
+    <hr>
+
+    <h4>CSS primenjen na stranici</h4>
+    <pre><code>
+                html {box-sizing: border-box}
+                h1, h2 {text-align: center}
+                #article-block {width: 50%;border: 1px solid #ccc;margin:100px auto;padding: 20px;}
+
+        </code></pre>
+    <hr>
+    <p>Copyright by &copy; Comtrade</p>
+
+</div>
+
+</body>
+</html>

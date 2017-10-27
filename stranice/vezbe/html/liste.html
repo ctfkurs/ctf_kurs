@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML liste</title>
+    <link rel="stylesheet" href="../css/liste.css">
+</head>
+
+<body>
+
+<!-- Ovo je centrirani blok, u njega stavljamo sadrzaj -->
+<div id="article-block">
+
+    <h1>HTML Liste</h1>
+    <h2>Vežba kreiranja i ugneždjivanja listi</h2>
+    <hr>
+
+    <h3>Neodredjene liste (ul)</h3>
+    <ul>
+        <li>Stavka 1</li>
+        <li>Stavka 2</li>
+        <li>Stavka 3</li>
+    </ul>
+
+    <h3>Odredjene liste (ul)</h3>
+    <ol>
+        <li>Stavka 1</li>
+        <li>Stavka 2</li>
+        <li>Stavka 3</li>
+    </ol>
+
+    <h3>Ugnježdjivanje listi</h3>
+    <ul>
+        <li>Stavka 1</li>
+        <li>Stavka 2
+            <ul>
+                <li>Podstavka 1</li>
+                <li>Podstavka 2</li>
+            </ul>
+        </li>
+        <li>Stavka 3</li>
+    </ul>
+
+    <h3>Kombinnovanje</h3>
+    <ul>
+        <li>Stavka 1</li>
+        <li>Stavka 2
+            <ol>
+                <li>Podstavka 1
+                    <ol type="A">
+                        <li>Podppod..1</li>
+                        <li>Podppod..2</li>
+                        <li>Podppod..3</li>
+                    </ol>
+                </li>
+                <li>Podstavka 2</li>
+            </ol>
+        </li>
+        <li>Stavka 3</li>
+    </ul>
+
+    <h3>Prikazivanje liste inline (
+        <code>display:inline-block</code> )</h3>
+    <ul class="inline-list">
+        <li>Stavka 1</li>
+        <li>Stavka 2</li>
+        <li>Stavka 3</li>
+    </ul>
+    <hr>
+
+    <h4>CSS primenjen na stranici</h4>
+
+    <pre><code>
+                    html {box-sizing: border-box}
+                    h1, h2 {text-align: center}
+                    #article-block {width: 50%;border: 1px solid #ccc;margin:100px auto;padding: 20px;}
+                    .inline-list {display: inline-block}
+                    .inline-list li{float: left;width: 100px}
+
+    </code> </pre>
+
+
+    <hr>
+    <p>Copyright by &copy; Comtrade</p>
+
+</div>
+
+</body>
+
+</html>

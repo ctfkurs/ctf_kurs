@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Basic</title>
+    <link rel="stylesheet" href="../css/js_basic.css">
+</head>
+<body>
+<div id="content-block">
+    <div id="content-inner">
+    <form>
+        <label for="name">Ime</label>
+        <br>
+        <input type="text" name="name" id="name"/>
+        <br>
+        <label for="lastname">Prezime</label>
+        <br>
+        <input type="text" name="lastname" id="lastname"/>
+        <br>
+        <label for="username">Unesite korisničko ime</label>
+        <br>
+        <input type="text" name="username" id="username"/>
+        <br><br>
+        <input type="button" name="commit" id="commit" value="Unesi podatke"/>
+    </form>
+        <hr>
+        <p>Rezultat unosa:</p>
+        <p>Ime i prezime</p>
+        <p id="nameResult"></p>
+        <p>Korisničko ime</p>
+        <p id="usernameResult"></p>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    document.getElementById("commit").addEventListener("click",function () {
+        var name = document.getElementById("name").value;
+        var lastName = document.getElementById("lastname").value;
+        var userName = document.getElementById("username").value;
+
+        document.getElementById("nameResult").innerHTML = name + " " + lastName;
+        document.getElementById("usernameResult").innerHTML = userName;
+    })
+</script>
+</body>
+</html>

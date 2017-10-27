@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="../css/js_bgs.css">
+</head>
+<body>
+<div id="content-block">
+    <form>
+        <input type="button" class="image-btn" value="slika1.jpg"/>
+        <input type="button" class="image-btn" value="slika2.jpg"/>
+        <input type="button" class="image-btn" value="slika3.jpg"/>
+    </form>
+</div>
+
+<script type="text/javascript">
+    var fields = document.querySelectorAll(".image-btn");
+
+    for (var i = 0; i < fields.length; i++) {
+        fields[i].addEventListener("click", function () {
+            var path = "/slike/";
+            var imgValue = this.value;
+            var img = path + imgValue;
+
+            document.getElementById("content-block").style.backgroundImage  = "url('"+img+"')";
+            document.getElementById("content-block").style.backgroundRepeat  = "no-repeat";
+            document.getElementById("content-block").style.backgroundPosition  = "center";
+
+        });
+    }
+</script>
+</body>
+</html>
